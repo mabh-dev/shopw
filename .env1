@@ -1,0 +1,42 @@
+
+###> symfony/lock ###
+# Choose one of the stores below
+# postgresql+advisory://db_user:db_password@localhost/db_name
+LOCK_DSN=flock
+###< symfony/lock ###
+
+###> symfony/messenger ###
+# Choose one of the transports below
+# MESSENGER_TRANSPORT_DSN=doctrine://default
+# MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages
+# MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages
+###< symfony/messenger ###
+
+###> symfony/mailer ###
+# MAILER_DSN=null://null
+###< symfony/mailer ###
+
+###> shopware/core ###
+APP_ENV=prod
+APP_URL=http://127.0.0.1:8000
+APP_SECRET=d074331f781a897850e793f5ddacb61b
+INSTANCE_ID=0dfd3d3a17944d97742252ff55e15df5
+BLUE_GREEN_DEPLOYMENT=0
+DATABASE_URL=mysql://root:root@localhost/shopware
+# With Shopware 6.4.17.0 the MAILER_DSN variable will be used in this template instead of MAILER_URL
+MAILER_URL=null://null
+###< shopware/core ###
+
+###> shopware/elasticsearch ###
+OPENSEARCH_URL=http://localhost:9200
+SHOPWARE_ES_ENABLED=0
+SHOPWARE_ES_INDEXING_ENABLED=0
+SHOPWARE_ES_INDEX_PREFIX=sw
+SHOPWARE_ES_THROW_EXCEPTION=1
+###< shopware/elasticsearch ###
+
+###> shopware/storefront ###
+STOREFRONT_PROXY_URL=http://localhost
+SHOPWARE_HTTP_CACHE_ENABLED=1
+SHOPWARE_HTTP_DEFAULT_TTL=7200
+###< shopware/storefront ###
