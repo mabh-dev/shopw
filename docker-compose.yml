@@ -15,7 +15,7 @@ services:
       - "docker.vm:127.0.0.1"
     environment:
       # define yourself
-      #- DATABASE_URL
+      - DATABASE_URL=mysql://root:root@mysql:3306/shopware
       - APP_URL=http://docker.vm:8000
       - INSTANCE_ID=
       - SHOPWARE_ES_ENABLED=1
@@ -39,6 +39,9 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
+    volumes:
+        - ./docker/data/mysql:/var/lib/mysql
+        - ./docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - 33061:3306  
 
